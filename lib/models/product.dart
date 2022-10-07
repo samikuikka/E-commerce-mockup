@@ -28,7 +28,7 @@ List<Product> products = [
     description: dummyText, 
     price: 30,
     sellCount: 35, 
-    color: Color.fromARGB(204, 15, 9, 23)
+    color: Color.fromARGB(82, 15, 9, 23)
   ),
   Product(
     id: 2,
@@ -38,7 +38,7 @@ List<Product> products = [
     description: dummyText, 
     price: 30,
     sellCount: 35, 
-    color: Color.fromARGB(166, 241, 235, 239)
+    color: Color.fromARGB(129, 241, 235, 239)
   ),
   Product(
     id: 3,
@@ -48,7 +48,7 @@ List<Product> products = [
     description: dummyText, 
     price: 30,
     sellCount: 35, 
-    color: Color.fromARGB(255, 35, 198, 227)
+    color: Color.fromARGB(152, 35, 198, 227)
   ),
   Product(
     id: 4,
@@ -58,6 +58,46 @@ List<Product> products = [
     description: dummyText, 
     price: 30,
     sellCount: 35, 
-    color: Color.fromARGB(255, 202, 134, 45)
+    color: Color.fromARGB(158, 202, 134, 45)
+  ),
+  Product(
+    id: 5,
+    type: 'Shoes',
+    image: "assets/images/black-shoe.png", 
+    title: "Black shoe", 
+    description: dummyText, 
+    price: 75,
+    sellCount: 35, 
+    color: Color.fromARGB(82, 15, 9, 23)
+  ),
+  Product(
+    id: 6,
+    type: 'Shoes',
+    image: "assets/images/blue-shoe.png", 
+    title: "Blue shoe", 
+    description: dummyText, 
+    price: 75,
+    sellCount: 35, 
+    color: Color.fromARGB(82, 30, 146, 209)
+  ),
+  Product(
+    id: 7,
+    type: 'Shoes',
+    image: "assets/images/brown-shoe.png", 
+    title: "Brown shoe", 
+    description: dummyText, 
+    price: 100,
+    sellCount: 35, 
+    color: Color.fromARGB(223, 128, 81, 0)
+  ),
+  Product(
+    id: 8,
+    type: 'Shoes',
+    image: "assets/images/white-shoe.png", 
+    title: "White shoe", 
+    description: dummyText, 
+    price: 80,
+    sellCount: 35, 
+    color: Color.fromARGB(159, 227, 225, 230)
   ),
 ];

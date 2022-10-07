@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CategoryList extends StatefulWidget {
   const CategoryList({super.key});
@@ -26,13 +27,13 @@ class CategoryState extends State<CategoryList> {
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
-          itemBuilder: (context, index) => createCategory(index),
+          itemBuilder: (context, index) => createCategory(index, context),
         ),
       ),
     );
   }
 
-  Widget createCategory(int index) {
+  Widget createCategory(int index, BuildContext context) {
     return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -44,7 +45,7 @@ class CategoryState extends State<CategoryList> {
                 });
               }),
               onPressed: (() {
-                print(index);
+                context.go('/category/${categories[index]}');
               }),
               child: Text(
                 categories[index],
