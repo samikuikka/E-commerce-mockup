@@ -23,21 +23,41 @@ List<Product> products = [
   Product(
     id: 1,
     type: 'Clothing',
-    image: "assets/images/black-shirt.jpg", 
+    image: "assets/images/black-shirt.png", 
     title: "Black shirt", 
     description: dummyText, 
     price: 30,
     sellCount: 35, 
-    color: Color.fromARGB(255, 165, 111, 237)
+    color: Color.fromARGB(204, 15, 9, 23)
   ),
   Product(
-    id: 1,
+    id: 2,
     type: 'Clothing',
-    image: "assets/images/white-shirt.jpg", 
-    title: "Black shirt", 
+    image: "assets/images/white-shirt.png", 
+    title: "White shirt", 
     description: dummyText, 
     price: 30,
     sellCount: 35, 
-    color: Color.fromARGB(166, 153, 27, 107)
+    color: Color.fromARGB(166, 241, 235, 239)
+  ),
+  Product(
+    id: 3,
+    type: 'Clothing',
+    image: "assets/images/blue-shirt.png", 
+    title: "Blue shirt", 
+    description: dummyText, 
+    price: 30,
+    sellCount: 35, 
+    color: Color.fromARGB(255, 35, 198, 227)
+  ),
+  Product(
+    id: 4,
+    type: 'Clothing',
+    image: "assets/images/brown-shirt.png", 
+    title: "Brown shirt", 
+    description: dummyText, 
+    price: 30,
+    sellCount: 35, 
+    color: Color.fromARGB(255, 202, 134, 45)
   ),
 ];
