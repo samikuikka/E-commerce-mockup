@@ -6,7 +6,7 @@ import './screens/home/home_screen.dart';
 import './screens/category/category_screen.dart';
 import './screens/product/product_screen.dart';
 
-void main() {
+main() async {
   final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
@@ -24,6 +24,7 @@ void main() {
       )
     ]
   );
+
   runApp(ProviderScope(child: MaterialApp.router(routerConfig: router)));
 }
 

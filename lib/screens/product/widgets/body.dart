@@ -28,7 +28,7 @@ class Body extends StatelessWidget {
             if (index == 0) {
               return Container(
                 width: double.infinity,
-                child: Image.asset(product.image),
+                child: Image.network(product.image),
               );
             }
             return Material(

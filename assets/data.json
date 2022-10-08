@@ -1,0 +1,43 @@
+{ "shop": 
+    { 
+        "data":  [
+            {
+                "id": "1",
+                "type": "Clothing",
+                "image": "https://i.postimg.cc/HxcM7J9Q/black-shirt.png",
+                "title": "Black shirt",
+                "price": "30",
+                "sellCount": "35",
+                "color": "0x8870f3ff"
+            },
+            {
+                "id": "2",
+                "type": "Clothing",
+                "image": "https://i.postimg.cc/G3DYLy2R/white-shirt.png",
+                "title": "White shirt",
+                "price": "30",
+                "sellCount": "35",
+                "color": "0x88d3e3e2"
+            },
+            {
+                "id": "3",
+                "type": "Clothing",
+                "image": "https://i.postimg.cc/Hxqy0p6F/blue-shirt.png",
+                "title": "Blue shirt",
+                "price": "30",
+                "sellCount": "35",
+                "color": "0x883283a8"
+            },
+            {
+                "id": "4",
+                "type": "Clothing",
+                "image": "https://i.postimg.cc/sx5Zwt8x/brown-shirt.png",
+                "title": "Brown shirt",
+                "price": "30",
+                "sellCount": "35",
+                "color": "0x88a86032"
+            }
+            
+        ]
+    } 
+}
