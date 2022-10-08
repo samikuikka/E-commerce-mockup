@@ -100,4 +100,124 @@ List<Product> products = [
     sellCount: 35, 
     color: Color.fromARGB(159, 227, 225, 230)
   ),
+  Product(
+    id: 9,
+    type: 'Accessories',
+    image: "assets/images/blue-glasses.png", 
+    title: "Blue sunglasses", 
+    description: dummyText, 
+    price: 120,
+    sellCount: 50, 
+    color: Color.fromARGB(159, 38, 97, 206)
+  ),
+  Product(
+    id: 10,
+    type: 'Accessories',
+    image: "assets/images/blue-hat.png", 
+    title: "Blue hat", 
+    description: dummyText, 
+    price: 75,
+    sellCount: 40, 
+    color: Color.fromARGB(159, 19, 81, 196)
+  ),
+  Product(
+    id: 11,
+    type: 'Accessories',
+    image: "assets/images/gold-glasses.png", 
+    title: "Gold Sunglasses", 
+    description: dummyText, 
+    price: 120,
+    sellCount: 40, 
+    color: Color.fromARGB(159, 217, 157, 16)
+  ),
+  Product(
+    id: 12,
+    type: 'Accessories',
+    image: "assets/images/pink-hat.png", 
+    title: "Pink hat", 
+    description: dummyText, 
+    price: 80,
+    sellCount: 35, 
+    color: Color.fromARGB(159, 206, 38, 181)
+  ),
+  Product(
+    id: 13,
+    type: 'Sports',
+    image: "assets/images/black-shorts.png", 
+    title: "Black sports shorts", 
+    description: dummyText, 
+    price: 30,
+    sellCount: 35, 
+    color: Color.fromARGB(157, 10, 0, 9)
+  ),
+  Product(
+    id: 14,
+    type: 'Sports',
+    image: "assets/images/grey-shorts.png", 
+    title: "Grey sports shorts", 
+    description: dummyText, 
+    price: 30,
+    sellCount: 35, 
+    color: Color.fromARGB(157, 164, 142, 162)
+  ),
+  Product(
+    id: 15,
+    type: 'Sports',
+    image: "assets/images/orange-runningshoe.png", 
+    title: "Orange running shoes", 
+    description: dummyText, 
+    price: 150,
+    sellCount: 35, 
+    color: Color.fromARGB(157, 220, 159, 16)
+  ),
+  Product(
+    id: 16,
+    type: 'Sports',
+    image: "assets/images/red-runningshoe.png", 
+    title: "Red running shoes", 
+    description: dummyText, 
+    price: 150,
+    sellCount: 35, 
+    color: Color.fromARGB(157, 197, 10, 32)
+  ),
+  Product(
+    id: 17,
+    type: 'Designer',
+    image: "assets/images/brown-polo.png", 
+    title: "Brown polo", 
+    description: dummyText, 
+    price: 170,
+    sellCount: 10, 
+    color: Color.fromARGB(157, 197, 104, 10)
+  ),
+  Product(
+    id: 18,
+    type: 'Designer',
+    image: "assets/images/grey-polo.png", 
+    title: "Grey polo", 
+    description: dummyText, 
+    price: 170,
+    sellCount: 10, 
+    color: Color.fromARGB(157, 152, 144, 135)
+  ),
+  Product(
+    id: 19,
+    type: 'Designer',
+    image: "assets/images/black-suit.png", 
+    title: "Black suit", 
+    description: dummyText, 
+    price: 550,
+    sellCount: 10, 
+    color: Color.fromARGB(157, 24, 13, 2)
+  ),
+  Product(
+    id: 20,
+    type: 'Designer',
+    image: "assets/images/red-sweatshirt.png", 
+    title: "Red sweatshirt", 
+    description: dummyText, 
+    price: 220,
+    sellCount: 20, 
+    color: Color.fromARGB(157, 197, 32, 10)
+  ),
 ];

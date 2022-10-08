@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import './screens/home/home_screen.dart';
 import './screens/category/category_screen.dart';
+import './screens/product/product_screen.dart';
 
 void main() {
   final router = GoRouter(
@@ -14,6 +15,12 @@ void main() {
         builder: (context, state) {
           return Category(category: state.params['id']!);
         }
+      ),
+      GoRoute(
+        path: '/product/:id',
+        builder: (context, state) {
+          return ProductScreen(product_id: state.params['id']!);
+        }   
       )
     ]
   );

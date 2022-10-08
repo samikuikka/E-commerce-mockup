@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../models/product.dart';
+import 'package:go_router/go_router.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -14,7 +15,7 @@ class ProductCard extends StatelessWidget {
             flex: 1,
             child: InkWell(
               onTap: () {
-                print(product.id);
+                context.push('/product/${product.id}');
               },
               borderRadius: BorderRadius.circular(20),
               highlightColor: Colors.black,
