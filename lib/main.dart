@@ -19,7 +19,7 @@ void main() {
       GoRoute(
         path: '/product/:id',
         builder: (context, state) {
-          return ProductScreen(product_id: state.params['id']!);
+          return ProductScreen(product_id: int.parse(state.params['id']!));
         }   
       )
     ]

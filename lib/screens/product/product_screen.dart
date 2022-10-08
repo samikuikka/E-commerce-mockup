@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../models/product.dart';
+import './widgets/body.dart';
 
 class ProductScreen extends StatelessWidget {
-  final String product_id;
+  final int product_id;
 
   const ProductScreen({super.key, required this.product_id});
 
   @override
   Widget build(BuildContext context) {
+    final Product product = products.singleWhere( (e) => e.id == product_id);
     return Scaffold(
       appBar: createAppBar(context),
-      body: Text('product'),
+      body: Body(product: product),
     );
   }
 
