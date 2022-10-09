@@ -8,7 +8,7 @@
                 "title": "Black shirt",
                 "price": "30",
                 "sellCount": "35",
-                "color": "0x8870f3ff"
+                "color": "0x88424242"
             },
             {
                 "id": "2",
@@ -36,7 +36,154 @@
                 "price": "30",
                 "sellCount": "35",
                 "color": "0x88a86032"
+            },
+            {
+                "id": "5",
+                "type": "Shoes",
+                "image": "https://i.postimg.cc/433Vs2K2/black-shoe.png",
+                "title": "Black shoes",
+                "price": "75",
+                "sellCount": "35",
+                "color": "0x88424242"
+            },
+            {
+                "id": "6",
+                "type": "Shoes",
+                "image": "https://i.postimg.cc/VkgXyPNb/blue-shoe.png",
+                "title": "Blue shoes",
+                "price": "75",
+                "sellCount": "35",
+                "color": "0x8881d4fa"
+            },
+            {
+                "id": "7",
+                "type": "Shoes",
+                "image": "https://i.postimg.cc/FKncRb3r/brown-shoe.png",
+                "title": "Brown shoes",
+                "price": "75",
+                "sellCount": "35",
+                "color": "0x888d6e63"
+            },
+            {
+                "id": "8",
+                "type": "Shoes",
+                "image": "https://i.postimg.cc/VkmXHkz8/white-shoe.png",
+                "title": "White shoes",
+                "price": "75",
+                "sellCount": "35",
+                "color": "0x88fafafa"
+            },
+            {
+                "id": "9",
+                "type": "Sports",
+                "image": "https://i.postimg.cc/vBC3dWXj/black-shorts.png",
+                "title": "Black shorts",
+                "price": "30",
+                "sellCount": "35",
+                "color": "0x88424242"
+            },
+            {
+                "id": "10",
+                "type": "Sports",
+                "image": "https://i.postimg.cc/k51TTrS7/grey-shorts.png",
+                "title": "Grey shorts",
+                "price": "30",
+                "sellCount": "35",
+                "color": "0x88757575"
+            },
+            {
+                "id": "11",
+                "type": "Sports",
+                "image": "https://i.postimg.cc/kgy1tRX6/orange-runningshoe.png",
+                "title": "Orange running shoes",
+                "price": "150",
+                "sellCount": "35",
+                "color": "0x88ff8a65"
+            },
+            {
+                "id": "12",
+                "type": "Sports",
+                "image": "https://i.postimg.cc/DzyCQf8C/red-runningshoe.png",
+                "title": "Red running shoes",
+                "price": "150",
+                "sellCount": "10",
+                "color": "0x88e53935"
+            },
+            {
+                "id": "13",
+                "type": "Accessories",
+                "image": "https://i.postimg.cc/RVKb4bkT/blue-glasses.png",
+                "title": "Blue sunglasses",
+                "price": "135",
+                "sellCount": "10",
+                "color": "0x884fc3f7"
+            },
+            {
+                "id": "14",
+                "type": "Accessories",
+                "image": "https://i.postimg.cc/wj9FHxc6/blue-hat.png",
+                "title": "Blue hat",
+                "price": "75",
+                "sellCount": "10",
+                "color": "0x884fc3f7"
+            },
+            {
+                "id": "15",
+                "type": "Accessories",
+                "image": "https://i.postimg.cc/tTs2frdW/gold-glasses.png",
+                "title": "Gold sunglasses",
+                "price": "135",
+                "sellCount": "10",
+                "color": "0x88ffb300"
+            },
+            {
+                "id": "16",
+                "type": "Accessories",
+                "image": "https://i.postimg.cc/m2YV019X/pink-hat.png",
+                "title": "Pink hat",
+                "price": "75",
+                "sellCount": "10",
+                "color": "0x88f06292"
+            },
+            {
+                "id": "17",
+                "type": "Designer",
+                "image": "https://i.postimg.cc/rwTZmNc2/black-suit.png",
+                "title": "Black suit",
+                "price": "550",
+                "sellCount": "10",
+                "color": "0x88424242"
+            },
+            {
+                "id": "18",
+                "type": "Designer",
+                "image": "https://i.postimg.cc/VLQDGWJ0/brown-polo.png",
+                "title": "Brown polo",
+                "price": "220",
+                "sellCount": "10",
+                "color": "0x88795548"
+            },
+            {
+                "id": "19",
+                "type": "Designer",
+                "image": "https://i.postimg.cc/kMtTvpgd/grey-polo.png",
+                "title": "Grey polo",
+                "price": "220",
+                "sellCount": "10",
+                "color": "0x88757575"
+            },
+            {
+                "id": "20",
+                "type": "Designer",
+                "image": "https://i.postimg.cc/KcKHsYQw/red-sweatshirt.png",
+                "title": "Grey polo",
+                "price": "235",
+                "sellCount": "15",
+                "color": "0x88f44336"
             }
+
+            
+
             
         ]
     } 
