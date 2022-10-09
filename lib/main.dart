@@ -25,6 +25,19 @@ main() async {
     ]
   );
 
-  runApp(ProviderScope(child: MaterialApp.router(routerConfig: router)));
+  runApp(ProviderScope(child: MaterialApp.router(
+    routerConfig: router,
+    theme: ThemeData(
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color(0xff212121),
+          padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(2)
+          )
+        )
+      )
+    ),
+  )));
 }
 
