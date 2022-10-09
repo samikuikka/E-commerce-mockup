@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import './widgets/body.dart';
 import '../../widgets/shopping_cart.dart';
 import '../../widgets/user.dart';
 
-class Category extends StatelessWidget {
-  final String category;
+class SettingsScreen extends StatelessWidget {
 
-  const Category({super.key, required this.category});
+  const SettingsScreen({super.key});
 
-  @override
+  @override 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: createAppBar(context),
-      body: Body(category: category),
+      body: Text('a'),
     );
   }
 
   AppBar createAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.white,
-      elevation: 1,
       leading: IconButton(
         icon: const Icon(
           Icons.arrow_back,
@@ -44,7 +41,8 @@ class Category extends StatelessWidget {
         ),
         const ShoppingCart(),
         const UserIcon()
-      ],
+      ]
     );
   }
+
 }

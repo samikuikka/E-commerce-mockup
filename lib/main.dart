@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import './screens/home/home_screen.dart';
 import './screens/category/category_screen.dart';
 import './screens/product/product_screen.dart';
+import './screens/settings/settings_screen.dart';
 
 main() async {
   final router = GoRouter(
@@ -21,6 +22,12 @@ main() async {
         builder: (context, state) {
           return ProductScreen(product_id: int.parse(state.params['id']!));
         }   
+      ),
+      GoRoute(
+        path: '/settings',
+        builder: (context, state) {
+          return const SettingsScreen();
+        },
       )
     ]
   );

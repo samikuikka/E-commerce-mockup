@@ -3,6 +3,7 @@ import './widgets/body.dart';
 import '../../providers/provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../widgets/shopping_cart.dart';
+import '../../widgets/user.dart';
 
 
 class HomeScreen extends ConsumerWidget {
@@ -11,14 +12,13 @@ class HomeScreen extends ConsumerWidget {
   
   @override 
   Widget build(BuildContext context, WidgetRef ref) {
-    final List<int> ids = ref.watch(shoppingProvider);
     return Scaffold(
-      appBar: createAppBar(context, ids),
+      appBar: createAppBar(context),
       body: Body(),
     );
   }
 
-  AppBar createAppBar(BuildContext context, List list) {
+  AppBar createAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
@@ -34,7 +34,8 @@ class HomeScreen extends ConsumerWidget {
           ),
           onPressed: () {},
         ),
-        ShoppingCart()
+        const ShoppingCart(),
+        const UserIcon()
       ],
     );
   }

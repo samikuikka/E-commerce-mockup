@@ -5,6 +5,7 @@ import '../../models/product.dart';
 import './widgets/body.dart';
 import '../../providers/provider.dart';
 import '../../widgets/shopping_cart.dart';
+import '../../widgets/user.dart';
 
 class ProductScreen extends ConsumerWidget {
   final int product_id;
@@ -14,24 +15,24 @@ class ProductScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final data = ref.watch(productProvider);
-    final ids = ref.watch(shoppingProvider);
+    
     return data.when(
         data: (data) {
           final Product product = data.singleWhere((e) => e.id == product_id);
           return Scaffold(
-            appBar: createAppBar(context, product.color, ids),
+            appBar: createAppBar(context, product.color),
             body: Body(product: product),
           );
         },
         error: (err, s) => Scaffold(
-            appBar: createAppBar(context, Colors.white, ids),
+            appBar: createAppBar(context, Colors.white),
             body: Text(err.toString())),
         loading: () => Scaffold(
-            appBar: createAppBar(context, Colors.white, ids),
+            appBar: createAppBar(context, Colors.white),
             body: const Text('loading')));
   }
 
-  AppBar createAppBar(BuildContext context, Color color, List list) {
+  AppBar createAppBar(BuildContext context, Color color) {
     return AppBar(
       backgroundColor: color,
       elevation: 0,
@@ -56,7 +57,8 @@ class ProductScreen extends ConsumerWidget {
           ),
           onPressed: () {},
         ),
-        ShoppingCart()
+        const ShoppingCart(),
+        const UserIcon()
       ],
     );
   }
