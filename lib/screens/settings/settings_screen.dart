@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../widgets/shopping_cart.dart';
 import '../../widgets/user.dart';
+import './widgets/body.dart';
 
 class SettingsScreen extends StatelessWidget {
 
@@ -11,7 +12,7 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: createAppBar(context),
-      body: Text('a'),
+      body: Body(),
     );
   }
 
