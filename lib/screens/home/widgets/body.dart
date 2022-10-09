@@ -8,9 +8,10 @@ class Body extends StatelessWidget {
 
   @override 
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
     return Column(
       children: [
-        const CategoryList(),
+        width < 600 ? Container() : const CategoryList(),
         Info(),
         TopProducts()
       ],
