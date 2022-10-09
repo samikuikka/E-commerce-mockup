@@ -20,14 +20,23 @@ class CategoryState extends State<CategoryList> {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: SizedBox(
         height: 30,
-        child: ListView.builder(
+        child: width < 1000 ? ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
           itemBuilder: (context, index) => createCategory(index, context),
+        ) : Row(
+          children: categories.asMap().entries.map((e) {
+            int index = e.key;
+            return Expanded(
+              child: createCategory(index, context)
+            );
+          }).toList(),
         ),
       ),
     );
