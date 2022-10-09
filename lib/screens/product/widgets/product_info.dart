@@ -17,15 +17,12 @@ class ProductInfo extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            //Title
             ProductName(title: product.title, type: product.type),
-
-            //Price
+            SizedBox(height: height*0.025),
             Price(price: product.price),
-            
+            SizedBox(height: height*0.05),
             Description(description: product.description),
-          
-            AddToCart()
+            AddToCart(id: product.id,)
 
           ],
         ),

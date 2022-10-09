@@ -26,6 +26,7 @@ main() async {
   );
 
   runApp(ProviderScope(child: MaterialApp.router(
+    debugShowCheckedModeBanner: false,
     routerConfig: router,
     theme: ThemeData(
       elevatedButtonTheme: ElevatedButtonThemeData(

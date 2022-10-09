@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import './widgets/body.dart';
+import '../../widgets/shopping_cart.dart';
 
 class Category extends StatelessWidget {
   final String category;
@@ -40,13 +41,7 @@ class Category extends StatelessWidget {
           ),
           onPressed: () {},
         ),
-        IconButton(
-          icon: const Icon(
-            Icons.shopping_cart,
-            color: Colors.black,
-          ),
-          onPressed: () {},
-        ),
+        ShoppingCart()
       ],
     );
   }

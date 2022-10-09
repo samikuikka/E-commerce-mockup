@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../providers/provider.dart';
 
 class ProductName extends StatelessWidget {
   final String title, type;
@@ -99,16 +101,21 @@ class Description extends StatelessWidget {
   }
 }
 
-class AddToCart extends StatelessWidget {
-  const AddToCart({super.key});
+class AddToCart extends ConsumerWidget {
+  final int id;
 
+  const AddToCart({super.key, required this.id});
+  
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final double height = MediaQuery.of(context).size.height;
     return Container(
         alignment: Alignment.center,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            ref.watch(shoppingProvider.notifier)
+            .update((state) => [...state, id]);
+          },
           child: Text('Add to bag', style: TextStyle(fontSize: getFontSize(height, 25)),),
       )
     );

@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 import './widgets/body.dart';
-import '../../models/product.dart';
+import '../../providers/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../widgets/shopping_cart.dart';
 
-class HomeScreen extends StatelessWidget {
+
+class HomeScreen extends ConsumerWidget {
 
   const HomeScreen({super.key});
   
   @override 
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final List<int> ids = ref.watch(shoppingProvider);
     return Scaffold(
-      appBar: createAppBar(),
+      appBar: createAppBar(context, ids),
       body: Body(),
     );
   }
 
-  AppBar createAppBar() {
+  AppBar createAppBar(BuildContext context, List list) {
     return AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
@@ -30,13 +34,7 @@ class HomeScreen extends StatelessWidget {
           ),
           onPressed: () {},
         ),
-        IconButton(
-          icon: const Icon(
-            Icons.shopping_cart,
-            color: Colors.black,
-          ),
-          onPressed: () {},
-        ),
+        ShoppingCart()
       ],
     );
   }
