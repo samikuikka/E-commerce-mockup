@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../providers/provider.dart';
+import '../../../models/product.dart';
 
 class ProductName extends StatelessWidget {
   final String title, type;
@@ -102,9 +103,9 @@ class Description extends StatelessWidget {
 }
 
 class AddToCart extends ConsumerWidget {
-  final int id;
+  final Product product;
 
-  const AddToCart({super.key, required this.id});
+  const AddToCart({super.key, required this.product});
   
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -114,7 +115,7 @@ class AddToCart extends ConsumerWidget {
         child: ElevatedButton(
           onPressed: () {
             ref.watch(shoppingProvider.notifier)
-            .update((state) => [...state, id]);
+            .update((state) => [...state, product]);
           },
           child: Text('Add to bag', style: TextStyle(fontSize: getFontSize(height, 25)),),
       )

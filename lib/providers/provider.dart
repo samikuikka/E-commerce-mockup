@@ -8,7 +8,7 @@ final productProvider = FutureProvider<List<Product>> ((ref) async {
   return ref.read(apiProvider).fetchProducts();
 });
 
-final shoppingProvider = StateProvider<List<int>> ((ref) => []);
+final shoppingProvider = StateProvider<List<Product>> ((ref) => []);
 
 class NameData extends StateNotifier<String> {
   late SharedPreferences prefs;

@@ -17,7 +17,9 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  AppBar createAppBar(BuildContext context) {
+}
+
+AppBar createAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.white,
       leading: IconButton(
@@ -40,5 +42,3 @@ class SettingsScreen extends StatelessWidget {
       ]
     );
   }
-
-}

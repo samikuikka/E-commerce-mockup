@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/provider.dart';
+import 'package:go_router/go_router.dart';
+import '../models/product.dart';
 
 class ShoppingCart extends ConsumerWidget {
   
@@ -8,7 +10,7 @@ class ShoppingCart extends ConsumerWidget {
 
   @override 
   Widget build(BuildContext context, WidgetRef ref) {
-    final List<int> list = ref.watch(shoppingProvider);
+    final List<Product> list = ref.watch(shoppingProvider);
     return Stack(
           alignment: AlignmentDirectional.center,
           children: [
@@ -17,7 +19,9 @@ class ShoppingCart extends ConsumerWidget {
                 Icons.shopping_cart,
                 color: Colors.black,
               ),
-              onPressed: () {},
+              onPressed: () {
+                context.push('/cart');
+              },
             ),
             Positioned(
               top: 6,

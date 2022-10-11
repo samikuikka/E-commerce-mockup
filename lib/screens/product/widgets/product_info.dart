@@ -22,7 +22,7 @@ class ProductInfo extends StatelessWidget {
             Price(price: product.price),
             SizedBox(height: height*0.05),
             Description(description: product.description),
-            AddToCart(id: product.id,)
+            AddToCart(product: product)
 
           ],
         ),
