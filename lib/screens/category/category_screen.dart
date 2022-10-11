@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import './widgets/body.dart';
 import '../../widgets/shopping_cart.dart';
 import '../../widgets/user.dart';
+import '../../widgets/search_button.dart';
 
 class Category extends StatelessWidget {
   final String category;
@@ -35,13 +36,7 @@ class Category extends StatelessWidget {
         style: TextStyle(color: Colors.black),
       ),
       actions: [
-        IconButton(
-          icon: const Icon(
-            Icons.search,
-            color: Colors.black,
-          ),
-          onPressed: () {},
-        ),
+        SearchIcon(),
         const ShoppingCart(),
         const UserIcon()
       ],

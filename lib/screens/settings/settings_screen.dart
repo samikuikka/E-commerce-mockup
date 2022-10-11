@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../widgets/shopping_cart.dart';
 import '../../widgets/user.dart';
+import '../../widgets/search_button.dart';
 import './widgets/body.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -33,13 +34,7 @@ class SettingsScreen extends StatelessWidget {
         style: TextStyle(color: Colors.black),
       ),
       actions: [
-        IconButton(
-          icon: const Icon(
-            Icons.search,
-            color: Colors.black,
-          ),
-          onPressed: () {},
-        ),
+        SearchIcon(),
         const ShoppingCart(),
         const UserIcon()
       ]
