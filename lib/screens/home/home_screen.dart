@@ -3,6 +3,7 @@ import './widgets/body.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../widgets/shopping_cart.dart';
 import '../../widgets/user.dart';
+import '../../widgets/search_button.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends ConsumerWidget {
@@ -65,13 +66,7 @@ class HomeScreen extends ConsumerWidget {
         style: TextStyle(color: Colors.black),
       ),
       actions: [
-        IconButton(
-          icon: const Icon(
-            Icons.search,
-            color: Colors.black,
-          ),
-          onPressed: () {},
-        ),
+        SearchIcon(),
         const ShoppingCart(),
         const UserIcon()
       ],

@@ -13,7 +13,10 @@ class ProductCard extends StatelessWidget {
       children: [
         Expanded(
             flex: 1,
-            child: InkWell(
+            child: Material(
+              elevation: 10,
+              borderRadius: BorderRadius.circular(20),
+              child: InkWell(
               onTap: () {
                 context.push('/product/${product.id}');
               },
@@ -26,6 +29,7 @@ class ProductCard extends StatelessWidget {
                 width: double.infinity,
                 child: Image.network(product.image),
               ),
+            ),
             )),
         Expanded(
           flex: 0,
