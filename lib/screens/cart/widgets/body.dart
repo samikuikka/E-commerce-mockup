@@ -17,8 +17,17 @@ class Body extends ConsumerWidget {
       return Container(
         color: Color(0xffc7c7c7),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20),
-          
+          padding: const EdgeInsets.all(20),
+          child: ListView(
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height - kToolbarHeight - 40,
+                color: Colors.red,
+              ),
+              const SizedBox(height: 20,),
+              Total(price: price, width: width ,)
+            ],
+          ),
         ),
       );
     }
@@ -36,7 +45,7 @@ class Body extends ConsumerWidget {
             const SizedBox(
               width: 20,
             ),
-            Total(price: price)
+            Total(price: price, width: width*0.3,)
           ],
         )
       ),

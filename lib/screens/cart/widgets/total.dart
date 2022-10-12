@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class Total extends StatelessWidget {
   final double price;
-
-  const Total({super.key, required this.price});
+  final double width;
+  const Total({super.key, required this.price, required this.width});
 
   @override
   Widget build(BuildContext context) {
 
-    double width = MediaQuery.of(context).size.width * 0.3;
+    //double width = MediaQuery.of(context).size.width * 0.3;
 
     return Expanded(
         flex: 0,
