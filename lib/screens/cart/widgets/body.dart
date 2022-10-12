@@ -3,6 +3,7 @@ import '../../../providers/provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../models/product.dart';
 import './total.dart';
+import './cart.dart';
 
 class Body extends ConsumerWidget {
 
@@ -15,15 +16,12 @@ class Body extends ConsumerWidget {
 
     if(width < 700) {
       return Container(
-        color: Color(0xffc7c7c7),
+        color: const Color(0xffc7c7c7),
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: ListView(
             children: [
-              Container(
-                height: MediaQuery.of(context).size.height - kToolbarHeight - 40,
-                color: Colors.red,
-              ),
+              Cart(products: products),
               const SizedBox(height: 20,),
               Total(price: price, width: width ,)
             ],
@@ -40,7 +38,7 @@ class Body extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: Container(color: Colors.red,),
+              child: Cart(products: products)
             ),
             const SizedBox(
               width: 20,
