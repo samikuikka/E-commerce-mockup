@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../providers/provider.dart';
 
-class PaymentForm extends StatefulWidget {
+class PaymentForm extends ConsumerStatefulWidget {
   final bool card;
 
   const PaymentForm({super.key, required this.card});
@@ -9,7 +11,7 @@ class PaymentForm extends StatefulWidget {
   FormState createState() => FormState();
 }
 
-class FormState extends State<PaymentForm> {
+class FormState extends ConsumerState<PaymentForm> {
   final _cardNumberController = TextEditingController();
   final _nameController = TextEditingController();
   final _dateController = TextEditingController();
@@ -28,9 +30,17 @@ class FormState extends State<PaymentForm> {
     double width = MediaQuery.of(context).size.width;
     final TextStyle? _style = Theme.of(context).textTheme.headline6;
 
+    //Initial values to form
+    final carddata = ref.watch(cardProvider);
+    _cardNumberController.text = carddata.number;
+    _nameController.text = carddata.name;
+    _dateController.text = carddata.date;
+    _cvvController.text = carddata.cvv;
+
     if (!widget.card) {
       return Container();
     }
+
 
     if (width < 600) {
       return Expanded(

@@ -56,6 +56,7 @@ class BodyState extends ConsumerState<Body> {
     CardDetails currentCard = ref.watch(cardProvider);
     TextStyle? headline6 = Theme.of(context).textTheme.headline6;
 
+
     return Container(
       color: const Color(0xffc7c7c7),
       child: Padding(
