@@ -4,6 +4,7 @@ Write your documentation for the project below.
 
 # Clothing web commerce site
 
+Site: https://samikuikka.github.io/project2/#/ [or from this link](https://samikuikka.github.io/project2/#/)
 This is an web e-commerce site for selling clothes. I'll briefly describe all the views of the website:
 
 
