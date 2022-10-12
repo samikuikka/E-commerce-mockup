@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/product.dart';
+import '../models/card_details.dart';
+import 'dart:convert';
 
 final apiProvider = Provider<ProductService>((ref) => ProductService());
 
@@ -57,4 +59,30 @@ final addressProvider = StateNotifierProvider<AddressData, String> ((ref) {
   AddressData addressdata = AddressData();
   addressdata.initAddress();
   return addressdata;
+});
+
+class CardData extends StateNotifier<CardDetails> {
+  late SharedPreferences prefs;
+
+  CardData(): super(CardDetails(number: '', name: '', date: '', cvv: ''));
+
+  initCard() async {
+    prefs = await SharedPreferences.getInstance();
+    if (prefs.containsKey('card')) {
+      final decoded = json.decode(prefs.getString('card')!);
+      CardDetails newCard = CardDetails.fromJson(decoded);
+      state = newCard;
+    }
+  }
+
+  changeCard(CardDetails card) async {
+    state = card;
+  }
+  
+}
+
+final cardProvider = StateNotifierProvider<CardData, CardDetails> ((ref) {
+  CardData carddata = CardData();
+  carddata.initCard();
+  return carddata;
 });

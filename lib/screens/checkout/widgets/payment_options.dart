@@ -23,7 +23,6 @@ class PaymentState extends State<PaymentOptions> {
         Expanded(
           flex: 0,
           child: Container(
-           color: Colors.red,
            width: width,
            child: Wrap(  
             direction: Axis.horizontal,
@@ -44,10 +43,10 @@ class PaymentState extends State<PaymentOptions> {
                         });
                       }),
 
-                      const Text(
+                      const Flexible(child: Text(
                         "Credit/Debit/ATM Card",
                         style: TextStyle(fontWeight: FontWeight.bold),
-                      )
+                      ))
                     
                 ],
               ),
@@ -65,10 +64,10 @@ class PaymentState extends State<PaymentOptions> {
                         });
                       }),
 
-                      const Text(
+                      const Flexible(child: Text(
                         "Cash On Delivery",
                         style: TextStyle(fontWeight: FontWeight.bold),
-                      )                    
+                      ))                 
                 ],
               )
             ],
