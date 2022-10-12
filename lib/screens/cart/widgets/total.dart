@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Total extends StatelessWidget {
   final double price;
@@ -95,7 +96,9 @@ class Total extends StatelessWidget {
                 alignment: Alignment.center,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(minimumSize: Size(width, 40)),
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push('/checkout');
+                  },
                   child: const Text('GO TO CHECKOUT'),
                 ))
           ],

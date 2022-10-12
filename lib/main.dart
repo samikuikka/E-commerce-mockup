@@ -7,6 +7,7 @@ import './screens/category/category_screen.dart';
 import './screens/product/product_screen.dart';
 import './screens/settings/settings_screen.dart';
 import './screens/cart/cart_screen.dart';
+import './screens/checkout/checkout_screen.dart';
 
 main() async {
   final router = GoRouter(
@@ -34,6 +35,12 @@ main() async {
         path: '/cart',
         builder: (context, state) {
           return CartScreen();
+        }
+      ),
+      GoRoute(
+        path: '/checkout',
+        builder: (context, state) {
+          return CheckoutScreen();
         }
       )
     ]
