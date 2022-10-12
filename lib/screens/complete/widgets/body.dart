@@ -16,6 +16,8 @@ class BodyState extends ConsumerState<Body> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+
     return Container(
       color: const Color(0xffc7c7c7),
       child: Center(
@@ -23,7 +25,7 @@ class BodyState extends ConsumerState<Body> {
           padding: const EdgeInsets.all(20),
           child: Container(
             color: Colors.white,
-            width: 400,
+            width: 400 < width * 0.4 ? width*0.4 : 400,
             child: Column(
               children: [
                 Text('You bought:',
