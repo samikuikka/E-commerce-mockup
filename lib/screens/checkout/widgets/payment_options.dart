@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import './payment_form.dart';
+import '../../../providers/provider.dart';
+import '../../../models/product.dart';
+import 'package:go_router/go_router.dart';
 
-class PaymentOptions extends StatefulWidget {
+class PaymentOptions extends ConsumerStatefulWidget {
   @override
   PaymentState createState() => PaymentState();
 }
 
-class PaymentState extends State<PaymentOptions> {
+class PaymentState extends ConsumerState<PaymentOptions> {
   var _card = true;
   var _cash = false;
 
@@ -15,6 +19,8 @@ class PaymentState extends State<PaymentOptions> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+
+    List<Product> products = ref.watch(shoppingProvider);
 
     return Expanded(
       flex: 1,
@@ -77,7 +83,11 @@ class PaymentState extends State<PaymentOptions> {
         PaymentForm(card: _card),
 
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            List<Product> newState = [...products];
+            ref.watch(shoppingProvider.notifier).update((state) => []);
+            context.go('/checkout/complete', extra: newState);
+          },
           style: ElevatedButton.styleFrom(
             minimumSize: Size(width*0.4, 0),
             padding: EdgeInsets.symmetric(vertical: 20)
