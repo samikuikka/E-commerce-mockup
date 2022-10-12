@@ -5,8 +5,9 @@ import '../../../models/product.dart';
 
 class ProductCard extends ConsumerWidget {
   final Product product;
+  bool fromCart;
 
-  const ProductCard({super.key, required this.product});
+  ProductCard({super.key, required this.product, this.fromCart = true});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -51,7 +52,7 @@ class ProductCard extends ConsumerWidget {
                             Expanded(
                               child: Container(
                                   alignment: Alignment.topLeft,
-                                  child: IconButton(
+                                  child: fromCart ? IconButton(
                                       icon: Icon(Icons.remove_shopping_cart_outlined),
                                       onPressed: () {
                                           ref.watch(shoppingProvider.notifier).update((state) {
@@ -61,7 +62,7 @@ class ProductCard extends ConsumerWidget {
                                             return newState;
                                           });
                                       },
-                              )),
+                              ) : Container()),
                             ),
                             Expanded(
                               child: Container(
