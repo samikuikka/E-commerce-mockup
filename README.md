@@ -1,6 +1,4 @@
-# Project ID: 6ddb3376-524f-49d4-a2b2-6fea7ed6ce14
 
-Write your documentation for the project below.
 
 # Clothing web commerce site
 
@@ -51,21 +49,4 @@ Show user bought items after user completes order in the checkout screen.
 User can also navigate by using search icon which open textfield that gives suggestions of different routes, e.g. typing blue gives "Blue shoes" suggestion which routes to that products product page.
 
 
-## Key challenges
-
-1) I had many times problems in positioning widgets, but working on this product finally taught me the logic of placing widgets which at start did not feel very intuitive.
-
-
-2) Shared preferences does give a lot of headache. Sometimes it works just fine but other times it gives weird error messages.
-
-
-3) Choosing right widget to right situation was hard. Sometimes I spend quite much time just googling about possible solutions for positioning and responsiviness problems. 
-
-## Learning moments
-
-1) I learned many new widgets and learned to use them also.
-
-2) I finally learned how the sizes go up in tree hieacrhy and contraints down.
-
-3) I tried different project structure and found it very helpful, good learning moment!
 
